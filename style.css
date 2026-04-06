@@ -1,0 +1,110 @@
+:root {
+    --sidebar-bg: #1e1e1e;
+    --main-bg: #c0c0c0;
+    --accent-green: #76b900;
+    --critical-red: #ff8c8c;
+    --card-white: #e0e0e0;
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    display: flex;
+}
+
+/* Sidebar Fixa em todas as telas */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    width: 240px;
+    height: 100vh;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    padding: 25px 20px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+}
+
+.nav-link {
+    color: #aaa;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: white;
+    background: #333;
+    border-left: 4px solid var(--accent-green);
+}
+
+.user-footer {
+    margin-top: auto;
+    padding: 20px;
+    background: #252525;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* Área de Conteúdo */
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+    width: calc(100% - 240px);
+    min-height: 100vh;
+}
+
+/* Cards Estilizados */
+.card-sentinel {
+    background: var(--card-white);
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 25px;
+    margin-bottom: 25px;
+    border: none;
+}
+
+.stat-critical {
+    background-color: var(--critical-red);
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+}
+
+.btn-sentinel {
+    background-color: var(--accent-green);
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.btn-sentinel:hover {
+    background-color: #65a300;
+    color: white;
+}
+
+/* Terminal de Logs */
+.terminal-box {
+    background: #000;
+    color: #0f0;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 15px;
+    border-radius: 4px;
+    height: 250px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+@keyframes blinker { 50% { opacity: 0; } }
